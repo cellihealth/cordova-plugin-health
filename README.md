@@ -18,7 +18,7 @@ This plugin stores health data in Google Fit, practice that is [discouraged by G
 Just execute this line in your project's folder:
 
 ```
-cordova plugin add cordova-plugin-health
+cordova plugin add https://github.com/cellihealth/cordova-plugin-health
 ```
 
 ## Requirements for iOS apps
