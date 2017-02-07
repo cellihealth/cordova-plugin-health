@@ -25,6 +25,8 @@ static NSString *const HKPluginKeySourceName = @"sourceName";
 static NSString *const HKPluginKeySourceBundleId = @"sourceBundleId";
 static NSString *const HKPluginKeyMetadata = @"metadata";
 static NSString *const HKPluginKeyUUID = @"UUID";
+static NSString *const HKPluginKeyDevice = @"device";
+
 
 #pragma mark Categories
 
@@ -1320,6 +1322,7 @@ static NSString *const HKPluginKeyUUID = @"UUID";
                                                                           //@TODO Update deprecated API calls
                                                                           entry[HKPluginKeySourceName] = sample.source.name;
                                                                           entry[HKPluginKeySourceBundleId] = sample.source.bundleIdentifier;
+                                                                          entry[HKPluginKeyDevice] = sample.device.name;
 
                                                                           if (sample.metadata == nil || ![NSJSONSerialization isValidJSONObject:sample.metadata]) {
                                                                               entry[HKPluginKeyMetadata] = @{};

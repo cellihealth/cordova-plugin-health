@@ -96,7 +96,7 @@ Health.prototype.requestAuthorization = function (dts, onSuccess, onError) {
     if (HKdatatypes.length) {
       window.plugins.healthkit.requestAuthorization({
         'readTypes': HKdatatypes,
-        'writeTypes': HKdatatypes
+        // 'writeTypes': HKdatatypes
       }, onSuccess, onError);
     } else onSuccess();
   }, onError);
@@ -166,6 +166,7 @@ Health.prototype.query = function (opts, onSuccess, onError) {
           res.distance = parseInt(data[i].distance);
           res.sourceName = data[i].sourceName;
           res.sourceBundleId = data[i].sourceBundleId;
+          res.device = data[i].device;
           result.push(res);
         }
       }
@@ -181,6 +182,7 @@ Health.prototype.query = function (opts, onSuccess, onError) {
           res.unit = 'activityType';
           res.sourceName = data[i].sourceName;
           res.sourceBundleId = data[i].sourceBundleId;
+          res.device = data[i].device;
           result.push(res);
         }
         onSuccess(result);
