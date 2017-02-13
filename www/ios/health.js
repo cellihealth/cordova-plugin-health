@@ -218,6 +218,7 @@ Health.prototype.query = function (opts, onSuccess, onError) {
           else if (opts.unit) res.unit = opts.unit;
           res.sourceName = samples[i].sourceName;
           res.sourceBundleId = samples[i].sourceBundleId;
+          res.device = samples[i].device;
           result.push(res);
         }
       };
